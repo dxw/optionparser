@@ -1,5 +1,5 @@
 {
-    "name": "mjackson/optionparser",
+    "name": "dxw/optionparser",
     "type": "library",
     "autoload": {
         "files": ["lib/OptionParser.php"]
