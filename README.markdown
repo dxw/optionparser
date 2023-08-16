@@ -2,6 +2,8 @@
 
 OptionParser is a parser for command-line options for PHP. It supports both short and long options, optional and/or required parameter checking, automatic callback execution, and pretty printing of usage messages.
 
+This package is a dependency of Whippet. It's been forked by dxw because the upstream repo is no longer maintained.
+
 ### Usage
 
 First create a parser object and then use it to parse your arguments. Examples explain it best:
@@ -62,7 +64,7 @@ A Unix-style executable is also provided for *nix users:
 
 OptionParser uses the [PHPUnit](http://www.phpunit.de/) unit testing framework to test the code. In order to run the tests, run the following command from the project root directory:
 
-    $ phpunit tests/OptionParser.php
+    $ vendor/bin/phpunit
 
 ### Credits
 
