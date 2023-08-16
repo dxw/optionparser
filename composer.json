@@ -3,5 +3,8 @@
     "type": "library",
     "autoload": {
         "files": ["lib/OptionParser.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
     }
 }
