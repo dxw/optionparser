@@ -1,17 +1,15 @@
 <?php
 
-require_once 'PHPUnit/Framework.php';
-
 require_once dirname(dirname(__FILE__)) . '/lib/OptionParser.php';
 
-class OptionParserTest extends PHPUnit_Framework_TestCase
+class OptionParserTest extends PHPUnit\Framework\TestCase
 {
 
     public function testInvalidOption()
     {
         $op = new OptionParser;
 
-        $this->setExpectedException('Exception');
+        $this->expectException('Exception');
 
         $args = array('-', '-c');
         $op->parse($args);
@@ -101,7 +99,7 @@ class OptionParserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($op->b, 1);
         $this->assertEquals($op->c, 'string');
 
-        $this->setExpectedException('Exception');
+        $this->expectException('Exception');
 
         $args = array('-', '-c');
         $op->parse($args);
@@ -136,7 +134,7 @@ class OptionParserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($op->getOption('long-req'), 'hi there');
         $this->assertEquals($op->getOption('long-opt'), '-a');
 
-        $this->setExpectedException('Exception');
+        $this->expectException('Exception');
 
         $args = array('-', '--dir-name');
         $op->parse($args);
