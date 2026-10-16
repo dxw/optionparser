@@ -484,7 +484,7 @@ class OptionParser
      * @return  array               Anything still present in $argv that wasn't matched by a rule
      * @throws  Exception
      */
-    public function parse(array &$argv=null)
+    public function parse(?array &$argv=null)
     {
         $this->_options = array();
 
